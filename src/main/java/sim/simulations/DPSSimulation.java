@@ -8,9 +8,8 @@ public class DPSSimulation {
 
     private int attackRoll = 38142;
     private int maxHit = 52;
-    private int simulations = 1000000;
 
-    public void run() {
+    public void run(int simulations) {
         Bloat bloat = new Bloat();
         int defenceRoll = bloat.getDefenceRoll();
 

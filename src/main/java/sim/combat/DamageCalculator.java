@@ -52,4 +52,26 @@ public class DamageCalculator {
 
         return damage;
     }
+
+    public static ScytheAttackResult scytheHitStats(int attack, int defence, int maxHit) {
+        int damage = 0;
+        int damageDivisor = 1;
+        int hits = 0;
+        int misses = 0;
+
+        for (int i = 0; i < 3; i++) {
+            int hit = hit(attack, defence, maxHit / damageDivisor);
+
+            if (hit > 0) {
+                damage += hit;
+                hits++;
+            } else {
+                misses++;
+            }
+
+            damageDivisor *= 2;
+        }
+
+        return new ScytheAttackResult(damage, hits, misses);
+    }
 }

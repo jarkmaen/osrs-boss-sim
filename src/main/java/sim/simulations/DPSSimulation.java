@@ -2,6 +2,7 @@ package sim.simulations;
 
 import sim.bosses.Bloat;
 import sim.combat.DamageCalculator;
+import sim.combat.ScytheAttackResult;
 
 public class DPSSimulation {
 
@@ -11,30 +12,42 @@ public class DPSSimulation {
 
     public void run() {
         Bloat bloat = new Bloat();
-        int bossHP = bloat.getHP();
         int defenceRoll = bloat.getDefenceRoll();
 
+        double totalHits = 0;
+        double totalAttacks = 0;
         double totalDamage = 0;
-        double totalTime = 0;
+        double totalMisses = 0;
+        double totalTimeToKill = 0;
 
         for (int i = 0; i < simulations; i++) {
-            int currentHP = bossHP;
-            int ticks = 0;
+            int bossHP = bloat.getHP();
+            int gameTicks = 0;
 
-            while (currentHP > 0) {
-                int damage = DamageCalculator.scythe(attackRoll, defenceRoll, maxHit);
-                currentHP -= damage;
-                ticks += 5;
+            while (bossHP > 0) {
+                ScytheAttackResult scytheAttackResult = DamageCalculator.scytheHitStats(attackRoll, defenceRoll,
+                        maxHit);
+                int damage = scytheAttackResult.getDamage();
+
+                bossHP -= damage;
+                gameTicks += 5;
+                totalAttacks++;
                 totalDamage += damage;
+                totalHits += scytheAttackResult.getHits();
+                totalMisses += scytheAttackResult.getMisses();
             }
 
-            totalTime += ticks * 0.6;
+            totalTimeToKill += gameTicks * 0.6;
         }
 
-        double dps = totalDamage / totalTime;
-        double avgTimeToKill = totalTime / simulations;
+        double accuracy = totalHits / (totalHits + totalMisses) * 100;
+        double avgTimeToKill = totalTimeToKill / simulations;
+        double dps = totalDamage / totalTimeToKill;
+        double expectedHit = totalDamage / totalAttacks;
 
+        System.out.println("Expected hit: " + expectedHit);
         System.out.println("DPS: " + dps);
-        System.out.println("Avg. TTK: " + avgTimeToKill);
+        System.out.println("Avg. TTK: " + avgTimeToKill + "s");
+        System.out.println("Accuracy: " + accuracy + "%");
     }
 }

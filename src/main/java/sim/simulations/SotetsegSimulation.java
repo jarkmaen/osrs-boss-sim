@@ -21,6 +21,7 @@ public class SotetsegSimulation {
 
     public void run(int simulations, boolean soulflameHorn) {
         Sotetseg sotetseg = new Sotetseg();
+        int size = sotetseg.getSize();
 
         double successfulKills = 0;
 
@@ -62,8 +63,8 @@ public class SotetsegSimulation {
             boolean bigBallTriggered = false;
 
             while (bossHP > 0) {
-                bossHP -= DamageCalculator.scythe(playerOneScytheAttackRoll, defenceRoll, playerOneScytheMaxHit);
-                bossHP -= DamageCalculator.scythe(playerTwoScytheAttackRoll, defenceRoll, playerTwoScytheMaxHit);
+                bossHP -= DamageCalculator.scythe(playerOneScytheAttackRoll, defenceRoll, playerOneScytheMaxHit, size);
+                bossHP -= DamageCalculator.scythe(playerTwoScytheAttackRoll, defenceRoll, playerTwoScytheMaxHit, size);
 
                 if (RandomNumberGenerator.getRandom(1, 3) <= 2) {
                     ballAttacks++;
@@ -76,10 +77,10 @@ public class SotetsegSimulation {
             }
 
             if (bigBallTriggered == true) {
-                bossHP -= DamageCalculator.scythe(playerOneScytheAttackRoll, defenceRoll, playerOneScytheMaxHit);
-                bossHP -= DamageCalculator.scythe(playerOneScytheAttackRoll, defenceRoll, playerOneScytheMaxHit);
-                bossHP -= DamageCalculator.scythe(playerTwoScytheAttackRoll, defenceRoll, playerTwoScytheMaxHit);
-                bossHP -= DamageCalculator.scythe(playerTwoScytheAttackRoll, defenceRoll, playerTwoScytheMaxHit);
+                bossHP -= DamageCalculator.scythe(playerOneScytheAttackRoll, defenceRoll, playerOneScytheMaxHit, size);
+                bossHP -= DamageCalculator.scythe(playerOneScytheAttackRoll, defenceRoll, playerOneScytheMaxHit, size);
+                bossHP -= DamageCalculator.scythe(playerTwoScytheAttackRoll, defenceRoll, playerTwoScytheMaxHit, size);
+                bossHP -= DamageCalculator.scythe(playerTwoScytheAttackRoll, defenceRoll, playerTwoScytheMaxHit, size);
             }
 
             if (bossHP <= 0) {

@@ -66,12 +66,18 @@ public class DamageCalculator {
         return new Pair<>(damage, specLanded);
     }
 
-    public static int scythe(int attack, int defence, int maxHit) {
+    public static int scythe(int attack, int defence, int maxHit, int size) {
         int damage = 0;
 
         damage += hit(attack, defence, maxHit);
-        damage += hit(attack, defence, maxHit / 2);
-        damage += hit(attack, defence, maxHit / 4);
+
+        if (size > 1) {
+            damage += hit(attack, defence, maxHit / 2);
+        }
+
+        if (size > 2) {
+            damage += hit(attack, defence, maxHit / 4);
+        }
 
         return damage;
     }

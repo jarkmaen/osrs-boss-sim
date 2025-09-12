@@ -20,6 +20,7 @@ public class BloatSimulation {
     public void run(int simulations, boolean threeDown) {
         Bloat bloat = new Bloat();
         int defenceRoll = bloat.getDefenceRoll();
+        int size = bloat.getSize();
 
         int scytheAttacks = 0;
         double successfulKills = 0;
@@ -39,8 +40,8 @@ public class BloatSimulation {
             bossHP -= DamageCalculator.claw(playerTwoClawAttackRoll, defenceRoll, playerTwoClawMaxHit);
 
             for (int j = 0; j < scytheAttacks; j++) {
-                bossHP -= DamageCalculator.scythe(playerOneScytheAttackRoll, defenceRoll, playerOneScytheMaxHit);
-                bossHP -= DamageCalculator.scythe(playerTwoScytheAttackRoll, defenceRoll, playerTwoScytheMaxHit);
+                bossHP -= DamageCalculator.scythe(playerOneScytheAttackRoll, defenceRoll, playerOneScytheMaxHit, size);
+                bossHP -= DamageCalculator.scythe(playerTwoScytheAttackRoll, defenceRoll, playerTwoScytheMaxHit, size);
             }
 
             if (bossHP <= 0) {

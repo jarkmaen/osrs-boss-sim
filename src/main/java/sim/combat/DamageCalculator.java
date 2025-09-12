@@ -1,5 +1,7 @@
 package sim.combat;
 
+import sim.util.Pair;
+
 import static sim.combat.RandomNumberGenerator.getRandom;
 
 public class DamageCalculator {
@@ -17,6 +19,16 @@ public class DamageCalculator {
             }
         } else {
             return 0;
+        }
+    }
+
+    public static int hitGuaranteed(int maxHit) {
+        int damage = getRandom(0, maxHit);
+
+        if (damage == 0) {
+            return 1;
+        } else {
+            return damage;
         }
     }
 
@@ -41,6 +53,17 @@ public class DamageCalculator {
         }
 
         return totalDamage;
+    }
+
+    public static Pair<Integer, Boolean> elderMaul(int attack, int defence, int maxHit) {
+        boolean specLanded = false;
+        int damage = hit(attack, defence, maxHit);
+
+        if (damage > 0) {
+            specLanded = true;
+        }
+
+        return new Pair<>(damage, specLanded);
     }
 
     public static int scythe(int attack, int defence, int maxHit) {

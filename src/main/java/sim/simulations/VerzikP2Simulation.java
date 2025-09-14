@@ -1,8 +1,14 @@
 package sim.simulations;
 
+import java.util.ArrayList;
+
+import javafx.application.Application;
+
 import sim.bosses.Nylo;
 import sim.bosses.VerzikP2;
 import sim.combat.DamageCalculator;
+import sim.ui.VerzikP2Chart;
+import sim.util.Pair;
 
 public class VerzikP2Simulation {
 
@@ -49,13 +55,21 @@ public class VerzikP2Simulation {
     }
 
     public void run(int simulations) {
-        for (int nyloThresholdPercentage = 5; nyloThresholdPercentage <= 70; nyloThresholdPercentage += 5) {
+        ArrayList<Pair<Integer, Double>> results = new ArrayList<>();
+        for (int nyloThresholdPercentage = 5; nyloThresholdPercentage <= 70; nyloThresholdPercentage++) {
             int totalNetDamage = simulateFight(simulations, nyloThresholdPercentage);
 
             double averageNetDamage = (double) totalNetDamage / simulations;
 
-            System.out.printf("Nylo threshold: %2d%% | Avg net damage: %.2f%n", nyloThresholdPercentage,
-                    averageNetDamage);
+            if (nyloThresholdPercentage % 5 == 0) {
+                System.out.printf("Nylo threshold: %2d%% | Avg net damage: %.2f%n", nyloThresholdPercentage,
+                        averageNetDamage);
+            }
+
+            results.add(new Pair<>(nyloThresholdPercentage, averageNetDamage));
         }
+
+        VerzikP2Chart.setData(results);
+        Application.launch(VerzikP2Chart.class);
     }
 }

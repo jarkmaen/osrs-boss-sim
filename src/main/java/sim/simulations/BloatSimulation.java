@@ -50,8 +50,8 @@ public class BloatSimulation {
         }
 
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
-        double oneInOdds = simulations / successfulKills;
         double successPercentage = successfulKills / simulations * 100;
+        long oneInOdds = Math.round(simulations / successfulKills);
 
         if (threeDown == true) {
             System.out.println("Chance of a three down: 1 in " + oneInOdds);

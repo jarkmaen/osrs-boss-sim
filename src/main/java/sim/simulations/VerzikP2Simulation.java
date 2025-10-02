@@ -6,8 +6,8 @@ import javafx.application.Application;
 
 import sim.bosses.Nylo;
 import sim.bosses.VerzikP2;
-import sim.combat.DamageCalculator;
 import sim.ui.VerzikP2Chart;
+import sim.util.DamageCalculator;
 import sim.util.Pair;
 
 public class VerzikP2Simulation {

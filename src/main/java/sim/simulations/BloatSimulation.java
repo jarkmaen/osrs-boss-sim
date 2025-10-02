@@ -3,7 +3,7 @@ package sim.simulations;
 import java.text.DecimalFormat;
 
 import sim.bosses.Bloat;
-import sim.combat.DamageCalculator;
+import sim.util.DamageCalculator;
 
 public class BloatSimulation {
 

@@ -3,9 +3,9 @@ package sim.simulations;
 import java.text.DecimalFormat;
 
 import sim.bosses.Sotetseg;
-import sim.combat.DamageCalculator;
-import sim.combat.RandomNumberGenerator;
+import sim.util.DamageCalculator;
 import sim.util.Pair;
+import sim.util.RandomNumberGenerator;
 
 public class SotetsegSimulation {
 

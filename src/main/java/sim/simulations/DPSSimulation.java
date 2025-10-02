@@ -1,8 +1,8 @@
 package sim.simulations;
 
 import sim.bosses.Bloat;
-import sim.combat.DamageCalculator;
-import sim.combat.ScytheAttackResult;
+import sim.util.DamageCalculator;
+import sim.util.ScytheAttackResult;
 
 public class DPSSimulation {
 

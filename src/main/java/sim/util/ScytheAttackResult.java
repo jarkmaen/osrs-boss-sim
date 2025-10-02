@@ -1,4 +1,4 @@
-package sim.combat;
+package sim.util;
 
 public class ScytheAttackResult {
 

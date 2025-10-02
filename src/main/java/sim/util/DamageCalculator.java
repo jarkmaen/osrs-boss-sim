@@ -1,8 +1,6 @@
-package sim.combat;
+package sim.util;
 
-import sim.util.Pair;
-
-import static sim.combat.RandomNumberGenerator.getRandom;
+import static sim.util.RandomNumberGenerator.getRandom;
 
 public class DamageCalculator {
     public static int hit(int attack, int defence, int maxHit) {

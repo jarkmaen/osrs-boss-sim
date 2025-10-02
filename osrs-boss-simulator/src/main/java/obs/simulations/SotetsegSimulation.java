@@ -1,11 +1,11 @@
-package sim.simulations;
+package obs.simulations;
 
 import java.text.DecimalFormat;
 
-import sim.bosses.Sotetseg;
-import sim.util.DamageCalculator;
-import sim.util.Pair;
-import sim.util.RandomNumberGenerator;
+import obs.bosses.Sotetseg;
+import obs.util.DamageCalculator;
+import obs.util.Pair;
+import obs.util.RandomNumberGenerator;
 
 public class SotetsegSimulation {
 

@@ -1,9 +1,9 @@
-package sim.bosses;
+package obs.bosses;
 
-public class Bloat {
+public class Sotetseg {
 
-    private int defenceRoll = 9156;
-    private int health = 1800;
+    private int defenceRoll = 28006;
+    private int health = 1000;
     private int size = 5;
 
     public int getDefenceRoll() {

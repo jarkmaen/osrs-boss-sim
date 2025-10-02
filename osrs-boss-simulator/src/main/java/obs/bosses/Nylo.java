@@ -1,10 +1,10 @@
-package sim.bosses;
+package obs.bosses;
 
-public class Sotetseg {
+public class Nylo {
 
-    private int defenceRoll = 28006;
-    private int health = 1000;
-    private int size = 5;
+    private int defenceRoll = 6976;
+    private int health = 150;
+    private int size = 2;
 
     public int getDefenceRoll() {
         return defenceRoll;

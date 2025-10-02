@@ -1,10 +1,10 @@
-package sim.bosses;
+package obs.bosses;
 
-public class Nylo {
+public class Bloat {
 
-    private int defenceRoll = 6976;
-    private int health = 150;
-    private int size = 2;
+    private int defenceRoll = 9156;
+    private int health = 1800;
+    private int size = 5;
 
     public int getDefenceRoll() {
         return defenceRoll;

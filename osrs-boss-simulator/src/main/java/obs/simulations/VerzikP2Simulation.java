@@ -1,14 +1,14 @@
-package sim.simulations;
+package obs.simulations;
 
 import java.util.ArrayList;
 
 import javafx.application.Application;
 
-import sim.bosses.Nylo;
-import sim.bosses.VerzikP2;
-import sim.ui.VerzikP2Chart;
-import sim.util.DamageCalculator;
-import sim.util.Pair;
+import obs.bosses.Nylo;
+import obs.bosses.VerzikP2;
+import obs.ui.VerzikP2Chart;
+import obs.util.DamageCalculator;
+import obs.util.Pair;
 
 public class VerzikP2Simulation {
 

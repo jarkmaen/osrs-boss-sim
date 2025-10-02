@@ -1,6 +1,6 @@
-package sim.util;
+package obs.util;
 
-import static sim.util.RandomNumberGenerator.getRandom;
+import static obs.util.RandomNumberGenerator.getRandom;
 
 public class DamageCalculator {
     public static int hit(int attack, int defence, int maxHit) {

@@ -1,11 +1,11 @@
-package sim.ui;
+package obs.ui;
 
 import java.util.Scanner;
 
-import sim.simulations.BloatSimulation;
-import sim.simulations.DPSSimulation;
-import sim.simulations.SotetsegSimulation;
-import sim.simulations.VerzikP2Simulation;
+import obs.simulations.BloatSimulation;
+import obs.simulations.DPSSimulation;
+import obs.simulations.SotetsegSimulation;
+import obs.simulations.VerzikP2Simulation;
 
 public class TextUI {
     public void run() {

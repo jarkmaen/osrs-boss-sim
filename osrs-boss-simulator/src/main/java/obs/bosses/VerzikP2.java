@@ -1,4 +1,4 @@
-package sim.bosses;
+package obs.bosses;
 
 public class VerzikP2 {
 

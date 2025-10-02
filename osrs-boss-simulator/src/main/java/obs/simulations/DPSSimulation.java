@@ -1,8 +1,8 @@
-package sim.simulations;
+package obs.simulations;
 
-import sim.bosses.Bloat;
-import sim.util.DamageCalculator;
-import sim.util.ScytheAttackResult;
+import obs.bosses.Bloat;
+import obs.util.DamageCalculator;
+import obs.util.ScytheAttackResult;
 
 public class DPSSimulation {
 

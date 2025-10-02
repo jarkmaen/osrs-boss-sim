@@ -1,9 +1,9 @@
-package sim.simulations;
+package obs.simulations;
 
 import java.text.DecimalFormat;
 
-import sim.bosses.Bloat;
-import sim.util.DamageCalculator;
+import obs.bosses.Bloat;
+import obs.util.DamageCalculator;
 
 public class BloatSimulation {
 

@@ -1,4 +1,4 @@
-package sim.util;
+package obs.util;
 
 import java.util.Random;
 

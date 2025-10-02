@@ -1,6 +1,6 @@
-package sim;
+package obs;
 
-import sim.ui.TextUI;
+import obs.ui.TextUI;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package sim.util;
+package obs.util;
 
 public class ScytheAttackResult {
 

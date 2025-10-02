@@ -1,4 +1,4 @@
-package sim.ui;
+package obs.ui;
 
 import java.util.ArrayList;
 
@@ -9,7 +9,7 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
-import sim.util.Pair;
+import obs.util.Pair;
 
 public class VerzikP2Chart extends Application {
 

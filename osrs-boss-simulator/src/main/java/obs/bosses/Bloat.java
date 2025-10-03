@@ -1,6 +1,6 @@
 package obs.bosses;
 
-public class Bloat {
+public class Bloat implements Boss {
 
     private int defenceRoll = 9156;
     private int health = 1800;

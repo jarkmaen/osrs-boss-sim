@@ -1,6 +1,6 @@
 package obs.bosses;
 
-public class VerzikP2 {
+public class VerzikP2 implements Boss {
 
     private int defenceRoll = 25916;
     private int health = 2625;

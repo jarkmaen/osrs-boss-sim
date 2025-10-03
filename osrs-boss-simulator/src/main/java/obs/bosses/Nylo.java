@@ -1,6 +1,6 @@
 package obs.bosses;
 
-public class Nylo {
+public class Nylo implements Boss {
 
     private int defenceRoll = 6976;
     private int health = 150;

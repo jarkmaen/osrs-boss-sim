@@ -1,6 +1,6 @@
 package obs.bosses;
 
-public class Sotetseg {
+public class Sotetseg implements Boss {
 
     private int defenceRoll = 28006;
     private int health = 1000;

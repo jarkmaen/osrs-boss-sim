@@ -2,7 +2,8 @@ package obs.simulations;
 
 import java.text.DecimalFormat;
 
-import obs.bosses.Bloat;
+import obs.bosses.Boss;
+import obs.bosses.BossType;
 import obs.util.DamageCalculator;
 
 public class BloatSimulation {
@@ -18,7 +19,7 @@ public class BloatSimulation {
     private int playerTwoClawMaxHit = 46;
 
     public void run(int simulations, boolean threeDown) {
-        Bloat bloat = new Bloat();
+        Boss bloat = BossType.BLOAT.getBoss();
         int defenceRoll = bloat.getDefenceRoll();
         int size = bloat.getSize();
 

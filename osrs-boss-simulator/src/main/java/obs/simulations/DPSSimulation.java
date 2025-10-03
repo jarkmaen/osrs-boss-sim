@@ -1,6 +1,7 @@
 package obs.simulations;
 
-import obs.bosses.Bloat;
+import obs.bosses.Boss;
+import obs.bosses.BossType;
 import obs.util.DamageCalculator;
 import obs.util.ScytheAttackResult;
 
@@ -10,7 +11,7 @@ public class DPSSimulation {
     private int maxHit = 52;
 
     public void run(int simulations) {
-        Bloat bloat = new Bloat();
+        Boss bloat = BossType.BLOAT.getBoss();
         int defenceRoll = bloat.getDefenceRoll();
 
         double totalHits = 0;

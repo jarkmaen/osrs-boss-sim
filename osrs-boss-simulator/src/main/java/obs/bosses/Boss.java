@@ -1,10 +1,25 @@
 package obs.bosses;
 
-public interface Boss {
+public class Boss {
+    private final int defenceRoll;
+    private final int health;
+    private final int size;
 
-    int getDefenceRoll();
+    public Boss(int defenceRoll, int health, int size) {
+        this.defenceRoll = defenceRoll;
+        this.health = health;
+        this.size = size;
+    }
 
-    int getHP();
+    public int getDefenceRoll() {
+        return defenceRoll;
+    }
 
-    int getSize();
+    public int getHP() {
+        return health;
+    }
+
+    public int getSize() {
+        return size;
+    }
 }

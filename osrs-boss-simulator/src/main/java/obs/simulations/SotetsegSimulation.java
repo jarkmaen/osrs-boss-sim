@@ -2,7 +2,8 @@ package obs.simulations;
 
 import java.text.DecimalFormat;
 
-import obs.bosses.Sotetseg;
+import obs.bosses.Boss;
+import obs.bosses.BossType;
 import obs.util.DamageCalculator;
 import obs.util.Pair;
 import obs.util.RandomNumberGenerator;
@@ -20,7 +21,7 @@ public class SotetsegSimulation {
     private int playerTwoElderMaulMaxHit = 65;
 
     public void run(int simulations, boolean soulflameHorn) {
-        Sotetseg sotetseg = new Sotetseg();
+        Boss sotetseg = BossType.SOTETSEG.getBoss();
         int size = sotetseg.getSize();
 
         double successfulKills = 0;

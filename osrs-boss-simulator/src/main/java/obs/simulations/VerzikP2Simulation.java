@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 import javafx.application.Application;
 
-import obs.bosses.Nylo;
-import obs.bosses.VerzikP2;
+import obs.bosses.Boss;
+import obs.bosses.BossType;
 import obs.ui.VerzikP2Chart;
 import obs.util.DamageCalculator;
 import obs.util.Pair;
@@ -16,11 +16,11 @@ public class VerzikP2Simulation {
     private int scytheMaxHit = 49;
 
     private int simulateFight(int simulations, int nyloThresholdPercentage) {
-        Nylo nylo = new Nylo();
+        Boss nylo = BossType.NYLOCAS_MATOMENOS.getBoss();
         int nyloDefenceRoll = nylo.getDefenceRoll();
         int nyloSize = nylo.getSize();
 
-        VerzikP2 verzik = new VerzikP2();
+        Boss verzik = BossType.VERZIK_P2.getBoss();
         int verzikDefenceRoll = verzik.getDefenceRoll();
         int verzikSize = verzik.getSize();
 

@@ -28,7 +28,8 @@ public class SotetsegSimulation {
 
         for (int i = 0; i < simulations; i++) {
             int ballAttacks = 1;
-            int bossHP = sotetseg.getHP();
+            // Only phase 1 is simulated (1/3 of Sotetseg's total HP)
+            int bossHP = sotetseg.getHP() / 3;
             int defenceRoll = sotetseg.getDefenceRoll();
 
             if (soulflameHorn == true) {

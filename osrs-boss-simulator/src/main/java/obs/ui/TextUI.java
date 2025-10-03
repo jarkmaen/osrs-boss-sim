@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import obs.simulations.BloatSimulation;
 import obs.simulations.DPSSimulation;
+import obs.simulations.MaxClawSimulation;
 import obs.simulations.SotetsegSimulation;
 import obs.simulations.VerzikP2Simulation;
 
@@ -16,6 +17,7 @@ public class TextUI {
         System.out.println("2 - DPS Simulation");
         System.out.println("3 - Sotetseg Simulation");
         System.out.println("4 - Verzik P2 Simulation");
+        System.out.println("5 - Max Claw Simulation");
 
         System.out.print("Enter your choice: ");
         int choice = sc.nextInt();
@@ -43,6 +45,8 @@ public class TextUI {
             new SotetsegSimulation().run(simulations, soulflameHorn);
         } else if (choice == 4) {
             new VerzikP2Simulation().run(simulations);
+        } else if (choice == 5) {
+            new MaxClawSimulation().run(simulations);
         }
 
         sc.close();
